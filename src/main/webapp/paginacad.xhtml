@@ -1,0 +1,61 @@
+<html xmlns:="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/facelets"
+	xmlns:h="http://www.java.sun.com/html"
+	xmlns:f="http://java.sun.com/jsf/corel"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+	
+	
+	<h:body>
+	
+	<p:ajaxStatus style ="width=16px;height=16px;" id="ajaxStatusPanel">
+	
+	<f:facet name="start">
+	
+	
+	<h:graphicImage value="img/ajaxLoading.gif"></h:graphicImage>
+	
+	</f:facet>
+	
+	<f:facet name="complete">
+	
+	<h:outputText value=""/>
+	
+	</f:facet>
+	
+	</p:ajaxStatus>
+	
+	<h:form>
+	
+	<p:panel header="Cadastro">
+	
+	
+	<h:panelGrid columns="4"> cellpadding="3">
+	
+	<h:outputLabel value="Nome:"  for="txtNome" ></h:outputLabel>
+	<h:inputText id = "nome" value="#{nomeBean.nome}"></h:inputText>
+	<h:outputLabel value="Senha:"  for="txtNome" ></h:outputLabel>
+	<h:inputText id = "senha" value="#{senhaBean.senha}"></h:inputText>
+	<h:outputLabel value="Data de Nascimento:"  for="txtNome" ></h:outputLabel>
+	<h:inputText id = "datanascimento" value="#{nascimentoBean.nascimento}"></h:inputText>
+	<h:outputLabel value="User:"  for="txtUser" ></h:outputLabel>
+	<h:inputText id = "user" value="#{userBean.user}"></h:inputText>
+	<p:commandButton value="Enviar" update="resultado"></p:commandButton>
+	<h:outputText value="#{nomeBean.nome}" id="resultado"></h:outputText>
+	
+	</h:panelGrid>
+	
+	</h:form>
+	
+	</h:body>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</html>
